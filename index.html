@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+<body>
+    
+    <div class="center-container">
+        <h1>Number Guessing Game</h1>
+        
+        <div id="game-message" class="game-container"></div>
+        
+        <div id="guess-results-container" class="game-container"></div>
+        
+        <input type="text" id="user-input" placeholder="Enter your guess (4 digits)">
+        <button onclick="guess(document.getElementById('user-input').value)">Submit Guess</button>
+        <button onclick="reset()">Reset Game</button>
+    </div>
+    <div id="win-popup" class="popup">
+        <p>Congratulations!🎉 You've guessed all the numbers.</p>
+        <button onclick="reset()">Play Again</button>
+    </div>
+
+    <div id="lose-popup" class="popup">
+        <p>Out of attempts. The secret numbers were: <span id="secret-numbers"></span></p>
+        <button onclick="reset()">Try Again</button>
+    </div>
+
+    <div id="bg"></div>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="particles.min.js"></script>
+    <script src="backstyle.js"></script>
+</body>
+</html>
